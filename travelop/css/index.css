@@ -1,0 +1,827 @@
+
+
+
+/********************************************
+    Header area
+********************************************/
+
+header {
+	background: var(--header);
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+header .top-bar {
+	background: var(--topbar);
+    padding: 10px 0;
+	opacity: 1;
+	transition: 0.3s;
+}
+header.scrolled .top-bar {
+	opacity: 0;
+	padding: 0;
+	height: 0px;
+}
+header .top-bar .wrapper {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	color: var(--pure);
+}
+header .top-bar .phone {
+	font-size: 12px;
+	font-weight: 300;
+}
+.social {
+	margin-left: 3rem;
+    font-size: 0;
+}
+.social i {
+	font-size: 12px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+header .top-bar .login {
+	flex: 1;
+	text-align: right;
+	font-size: 0px;
+	text-transform: uppercase;
+}
+header .top-bar .login a {
+	padding: 0 10px;
+	position: relative;
+	font-weight: 300;
+	font-size: 12px;
+	color: var(--pure);
+}
+header .top-bar .login a:nth-child(1)::after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 10px;
+	background: var(--pure);
+	right: -2px;
+	top: 4px;
+}
+header .main-nav {
+	padding: 3rem 0;
+	position: relative;
+}
+header.scrolled .main-nav {
+	padding: 1rem 0;
+}
+header .main-nav .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	display: flex;
+	align-items: baseline;
+}
+.logo i {
+	font-size: 52px;
+	margin-right: 5px;
+	color: var(--a-hover);
+	/* background: linear-gradient(30deg,#b500b2,yellow);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text; */
+}
+.logo h1 {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: -1px;
+	color: var(--pure);
+}
+header .main-nav .nav ul {
+	display: flex;
+	margin: 0;
+}
+header .main-nav .nav ul li {
+	padding: 0px 15px;
+    font-weight: 300;
+    position: relative;
+}
+header .main-nav .nav ul li a {
+	position: relative;
+	color: var(--pure);
+	text-transform: uppercase;
+}
+header .main-nav .nav ul li a:hover {
+	color: var(--primary);
+}
+header .main-nav .nav ul li a::after {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(to left,#9c179a,var(--a-hover));
+	bottom: -12px;
+	left: 0;
+    transition: 0.2s;
+}
+header .main-nav .nav ul li:hover a::after {
+    width: 100%;
+}
+.main-nav .search .input {
+	position: absolute;
+	right: 8%;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s;
+	top: 135%;
+}
+.main-nav .search.active .input {
+    visibility: visible;
+    opacity: 1;
+	top: 100%;
+}
+.main-nav .search .input input {
+	height: 40px;
+	width: 220px;
+	padding: 0 10px;
+    outline: none;
+}
+.main-nav .search i {
+	cursor: pointer;
+	color: var(--pure);
+}
+.main-nav .search i:hover {
+    color: var(--a-hover);
+}
+
+
+
+/********************************************
+    Home Section
+********************************************/
+
+section.home {
+	background: url(../img/Background/home_slider.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+}
+section.home .background {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #24044070;
+}
+section.home .inner {
+	text-align: center;
+	color: var(--pure);
+}
+section.home h1 {
+	font-size: 8rem;
+	text-transform: uppercase;
+	letter-spacing: -4px;
+	margin-bottom: 0;
+}
+section.home h2 {
+	font-family: ink free;
+	font-size: 7rem;
+	font-weight: 1000;
+	margin-top: -47px;
+}
+
+
+
+
+
+/********************************************
+    Search Section
+********************************************/
+
+
+section.search {
+	background: linear-gradient(to right,var(--primary),var(--secondary));
+	position: relative;
+	padding-top: 0;
+}
+section.search {
+	background: linear-gradient(to right,var(--primary),var(--secondary));
+	position: relative;
+}
+section.search .container {
+	position: relative;
+}
+section.search ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	bottom: 100%;
+	background: var(--pure);
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	left: 0;
+	overflow: hidden;
+}
+section.search ul li {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	color: #444;
+	cursor: pointer;
+}
+
+section.search ul li.active, section.search ul li:hover {
+	background: var(--primary);
+	color: var(--pure);
+}
+section.search ul li.active i, section.search ul li:hover i {
+	color: var(--pure);
+}
+section.search ul li i {
+	font-size: 26px;
+	color: var(--primary);
+}
+section.search ul li h6 {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-left: 12px;
+	font-weight: 500;
+}
+section.search .all-input {
+	display: flex;
+	height: 150px;
+	justify-content: space-between;
+}
+section.search .all-input > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin: 0 6px;
+}
+section.search .all-input > div:nth-child(1) {
+	flex: 3.5;
+}
+section.search .all-input > div:nth-child(2) {
+	flex: 2;
+}
+section.search .all-input > div:nth-child(3) {
+	flex: 2;
+}
+section.search .all-input > div:nth-child(4) {
+	flex: 1;
+}
+section.search .all-input > div:nth-child(5) {
+	flex: 1;
+}
+section.search .all-input > div label {
+	text-transform: uppercase;
+	font-size: 13px;
+	margin-left: 5px;
+	margin-bottom: 7px;
+	font-weight: 600;
+	color: var(--pure);
+}
+section.search .all-input > div input, section.search .all-input > div select {
+	height: 50px;
+	padding: 0 10px;
+	border-radius: 0px solid;
+	border: none;
+	font-family: poppins;
+	text-transform: uppercase;
+	color: var(--paragraph);
+}
+section.search .all-input > div input:hover, section.search .all-input > div select:hover {
+	outline: 1px solid var(--primary);
+}
+section.search .all-input .btn-primary {
+	height: 50px;
+	margin-top: 65px;
+	background: var(--topbar);
+	margin-left: 15px;
+}
+
+
+
+
+/********************************************
+    Intro Section
+********************************************/
+
+section.intro {
+	padding: 5rem 0;
+}
+section.intro h1 {
+	font-size: 36px;
+	text-align: center;
+}
+section.intro > p {
+	font-size: 24px;
+	text-align: center;
+	width: 80%;
+	margin: 1rem auto;
+}
+section.intro .wrapper {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: repeat(3,1fr);
+	text-align: center;
+	grid-gap: 2rem;
+	margin-top: 3rem;
+}
+section.intro .card {
+	padding-top: 2rem;
+}
+section.intro .card:nth-child(1) {
+	background: url(../img/intro_1.jpg);
+	background-size: cover;
+}
+section.intro .card:nth-child(2) {
+	background: url(../img/intro_2.jpg);
+	background-size: cover;
+}
+section.intro .card:nth-child(3) {
+	background: url(../img/intro_3.jpg);
+	background-size: cover;
+}
+section.intro .card p {
+	background: var(--primary);
+	display: inline;
+	padding: 4px 30px;
+	border-radius: 50px;
+	color: var(--pure);
+}
+section.intro .card > div {
+	margin-top: 4rem;
+}
+section.intro .card > div h2 {
+	font-size: 48px;
+	color: var(--pure);
+}
+section.intro .card > div h6 {
+	font-size: 14px;
+	color: var(--pure);
+	font-weight: 400;
+	margin: -5px 0px 15px 0px;
+}
+section.intro .card .rating-star {
+	margin-bottom: 3rem;
+}
+section.intro .card .btn-primary {
+	margin-bottom: 4rem;
+}
+
+
+
+
+/********************************************
+    Package Section
+********************************************/
+
+section.package {
+	background: url(../img/Background/contact_background.jpg);
+	background-size: cover;
+	padding: 8rem 0;
+	background-position: center;
+	position: relative;
+}
+section.package .inner-content {
+	background: var(--pure);
+	padding: 4rem 6rem;
+	text-align: center;
+}
+section.package .inner-content h2 {
+	text-transform: uppercase;
+	font-size: 32px;
+	font-weight: 500;
+}
+section.package .inner-content .rating-star {
+	margin-top: 5px;
+}
+section.package .inner-content p {
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 1rem;
+	line-height: 2;
+}
+section.package .container > button {
+	width: 28px;
+	height: 35px;
+	border: 2px solid var(--pure);
+	border-radius: 7px;
+	background: transparent;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.package .container > button img {
+	width: 10px;
+}
+.previous {
+	left: 50px;
+	top: 50%;
+}
+.next {
+	right: 50px;
+	top: 50%;
+}
+section.package .container > button:hover {
+	border: 2px solid var(--primary);
+	cursor: pointer;
+}
+
+
+
+
+/********************************************
+    Offer Section
+********************************************/
+
+section h1 {
+	font-size: 32px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+section.offer .wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 5rem 2rem;
+}
+section.offer .item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+}
+section.offer .item .left h5 {
+	background: var(--primary);
+	position: relative;
+	bottom: 24px;
+	padding: 5px 2rem;
+	text-transform: uppercase;
+	color: whitesmoke;
+}
+section.offer .item .right p:nth-child(1) {
+	line-height: normal;
+}
+section.offer .item .right p span {
+	font-size: 34px;
+	font-weight: 600;
+	color: var(--primary);
+	margin-right: 5px;
+}
+section.offer .item .right .rating-star {
+	margin-top: -8px;
+	margin-bottom: 1rem;
+}
+section.offer .item .right .rating-star i {
+	font-size: 12px;
+}
+section.offer .item .right p {
+	line-height: 2;
+}
+section.offer .item .right .icon {
+	margin: 1rem 0px;
+}
+section.offer .item .right .icon i {
+	font-size: 26px;
+	margin-right: 12px;
+	color: var(--paragraph);
+	opacity: 0.8;
+}
+section.offer .item .right a {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	display: block;
+	margin-top: 2rem;
+}
+
+section.offer {
+	background: aliceblue;
+}
+section.get-touch {
+	background: url(https://thumbs.dreamstime.com/b/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-150871769.jpg);
+	background-attachment: inherit;
+	background-size: contain;
+}
+
+
+/********************************************
+    Testimonial Section
+********************************************/
+
+section.testimonial {
+	border-bottom: 3px solid;
+	border-image: linear-gradient(to left, var(--primary), var(--secondary)) 1;
+}
+section.testimonial .wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2rem;
+	padding-top: 3rem;
+}
+section.testimonial .item {
+	position: relative;
+	background: url(https://preview.colorlib.com/theme/travelix/images/xtest_1.jpg.pagespeed.ic.-6ItEd8cDS.webp);
+	background-size: cover;
+	min-height: 440px;
+	display: flex;
+}
+section.testimonial .item .icon {
+	width: 70px;
+	height: 70px;
+	background: var(--primary);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	transform: translateY(-50%);
+	left: 36px;
+}
+section.testimonial .item .icon i {
+	font-size: 28px;
+	color: var(--pure);
+}
+section.testimonial .item .text {
+	height: 50%;
+	align-self: flex-end;
+	background: var(--header);
+	padding: 3rem;
+	position: relative;
+}
+section.testimonial .item .text .name {
+	position: absolute;
+	top: 0;
+	background: var(--pure);
+	padding: 5px 1.5rem;
+	transform: translateY(-50%);
+}
+section.testimonial .item .text .name h5 {
+	text-transform: uppercase;
+	font-size: 16px;
+} 
+section.testimonial .item .text .name p {
+	font-size: 12px;
+}
+section.testimonial .item .text > h4 {
+	color: var(--pure);
+	font-weight: 400;
+	font-size: 20px;
+	position: relative;
+	padding-left: 13px;
+}
+section.testimonial .item .text > h4::after {
+	content: "''";
+	position: absolute;
+	margin-left: 5px;
+	font-size: 24px;
+}
+section.testimonial .item .text > h4::before {
+	content: "''";
+	position: absolute;
+	font-size: 24px;
+	left: 0;
+}
+section.testimonial .item .text > p {
+	color: var(--pure);
+	margin-top: 10px;
+}
+
+
+
+
+/********************************************
+    Trending Section
+********************************************/
+
+section.trending .wrapper {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 3rem;
+}
+section.trending .item {
+	display: flex;
+}
+section.trending .item .left {
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+}
+section.trending .item .right h4 {
+	text-transform: uppercase;
+	font-weight: 500;
+}
+section.trending .item .right h6 {
+	color: var(--primary);
+	margin: 3px 0;
+}
+section.trending .item .right p {
+	text-transform: uppercase;
+}
+
+
+
+
+/********************************************
+    Get Touch Section
+********************************************/
+
+section.get-touch .wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+}
+section.get-touch .left {
+	position: relative;
+}
+section.get-touch .left .contact-img {
+	background: url(../img/icon/man.png) no-repeat;
+	width: 107%;
+	height: 120%;
+	background-size: cover;
+	position: absolute;
+	z-index: 1;
+	left: -60px;
+	bottom: -130px;
+	padding: 1rem;
+}
+section.get-touch .right {
+	background: linear-gradient(45deg, var(--primary),var(--secondary));
+	padding: 5rem 2rem;
+	margin-right: -15px;
+	margin-left: 15px;
+}
+section.get-touch .right h1 {
+	color: var(--pure);
+	text-align: left;
+	margin-bottom: 2rem;
+}
+section.get-touch .right div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	margin-bottom: 1rem;
+}
+section.get-touch .right input, section.get-touch .right textarea {
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid var(--pure);
+	width: 100%;
+	background: transparent;
+	padding: 10px;
+	outline: none;
+	font-family: poppins;
+}
+section.get-touch .right input:nth-child(1) {
+	order: 1;
+}
+section.get-touch .right textarea {
+	height: 120px;
+	padding: 10px;
+	margin-top: 2rem;
+}
+section.get-touch .right .btn-primary {
+	background: var(--topbar);
+	margin: 0 0;
+	margin-top: 3rem;
+}
+
+
+
+
+/********************************************
+    Footer Section
+********************************************/
+
+footer {
+	height: 500px;
+	background: var(--topbar);
+	padding: 5rem 0;
+}
+footer .wrapper {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 2rem;
+}
+footer h3 {
+	color: var(--pure);
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 1.5rem;
+}
+footer .logo {
+	margin-bottom: 2rem;
+}
+footer .item1 p {
+	line-height: 2;
+	color: var(--pure);
+	margin-bottom: 1.5rem;
+}
+footer .social {
+	margin: 1rem 0px;
+}
+footer .social i {
+	border: 1px solid var(--primary);
+	padding: 8px;
+	border-radius: 50%;
+	font-size: 14px;
+	margin: 5px;
+	color: var(--pure);
+}
+footer .social i:hover {
+	background: var(--primary);
+	color: var(--dark);
+}
+footer .blog .item {
+	display: flex;
+	margin-bottom: 1rem;
+}
+footer .blog .item {
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+footer .blog .item .left {
+	width: 68px;
+	height: 68px;
+	margin-right: 1rem;
+}
+footer .blog .item .left img {
+	height: 100%;
+}
+footer .blog .right p {
+	color: var(--pure);
+	margin-bottom: 0.6rem;
+}
+footer .blog .right span {
+	color: var(--primary);
+	font-size: 12px;
+}
+footer .tags .tag-item {
+	display: flex;
+	flex-wrap: wrap;
+}
+footer .tags span {
+	border: 1px solid var(--primary);
+	padding: 10px 18px;
+	margin: 6px 5px;
+	color: var(--pure);
+	font-size: 12px;
+}
+footer .contact-info .item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+footer .contact-info .item i {
+	width: 30px;
+	font-size: 22px;
+	color: var(--primary);
+	margin-right: 10px;
+}
+footer .contact-info .item p {
+	color: var(--pure);
+	font-weight: 300;
+}
+
+
+
+
+
+/********************************************
+    Copyright Section
+********************************************/
+
+.copyright {
+	background: #1c002d;
+	padding: 20px 0;
+}
+.copyright .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.copyright .left p {
+	font-size: 12px;
+}
+.copyright .right .nav ul {
+	display: flex;
+}
+.copyright .right .nav ul li {
+	margin: 0 15px;
+	font-size: 13px;
+}
+.copyright .right .nav ul li a {
+	color: var(--paragraph);
+	text-transform: uppercase;
+}
+.copyright .right .nav ul li:hover a {
+	color: var(--pure);
+}
