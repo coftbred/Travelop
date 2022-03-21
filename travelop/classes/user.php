@@ -141,7 +141,7 @@
             // CREATE LOGGED IN USE SESSION: ID, NAME, ROLE, LOGGEDIN
             $_SESSION['user_name'] = $this->user['name'];
             $_SESSION['user_id'] = $this->user['id'];
-            // $_SESSION['user_role'] = $this->user['role'];
+            $_SESSION['user_role'] = $this->user['role'];
             $_SESSION['loggedin'] = true;
             $location = "Location: index.php?SignUp=success";
             header($location);

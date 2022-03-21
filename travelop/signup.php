@@ -1,7 +1,6 @@
 <?php 
     include 'includes/header.php';
 	include 'classes/user.php';
-	include 'config.php';
 	
 	if (isset($_POST['sign_up'])) {
 		$name = $_POST['username'];
@@ -39,13 +38,13 @@ section {
 				</div>
 			</div>
 			<div class="card-body">
-				<form>
+				<form id="register" action="signup.php" method="POST">
 					<!-- Username -->
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Username">
+						<input name="username" type="text" class="form-control" placeholder="Username">
 					</div>
 					<!-- Username -->
 
@@ -54,7 +53,7 @@ section {
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-envelope"></i></span>
 						</div>
-						<input type="email" class="form-control" placeholder="Email">
+						<input name="email" type="email" class="form-control" placeholder="Email">
 					</div>
 					<!-- Email -->
 
@@ -63,7 +62,7 @@ section {
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-phone"></i></span>
 						</div>
-						<input type="tel" class="form-control" placeholder="Phone number">
+						<input name="phone" type="tel" class="form-control" placeholder="Phone number">
 					</div>
 					<!-- Phone -->
 
@@ -72,7 +71,7 @@ section {
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="Password">
+						<input name="password" type="password" class="form-control" placeholder="Password">
 					</div>
 					<!-- Password -->
 
@@ -81,7 +80,7 @@ section {
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="Enter password again">
+						<input name="re_password" type="password" class="form-control" placeholder="Enter password again">
 					</div>
 					<!-- Re Password -->
 

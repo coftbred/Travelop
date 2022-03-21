@@ -101,7 +101,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <button class="btn-primary">See more <span></span></button>
+                    <a href="destination.php"><button class="btn-primary" >See more<span></span></button></a>
                 </div>
             </div>
             <div class="card">

@@ -1,6 +1,5 @@
 <?php 
 	include 'config.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,13 +37,13 @@
                     <?php if ($_SESSION['loggedin'] == true): ?>  
                         <a href="#"><i class="fas fa-user"></i> <?php echo $_SESSION['user_name']; ?> </a>             
                     <?php else: ?>
-                        <a href="login.php"><i class="fas fa-user"></i> Log In </a>
+                        <a href="login.php"><i class="fas fa-user"></i>Log In</a>
                     <?php endif; ?>    
                     <span></span>
                     <?php if($_SESSION['loggedin'] == true): ?>
                     <a href="logout.php">Logout</a>
                     <?php else: ?>
-                        <a href="signup.php"> Register </a>
+                        <a href="signup.php"> <i class="fas fa-registered" aria-hidden="true"></i>Register</a>
                     <?php endif; ?> 
                         <!-- <a href="login.php">Login</a>
                         <span></span>
@@ -67,6 +66,9 @@
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="offers.php">Offer</a></li>
                             <li><a href="blog.php">News</a></li>
+                            <!-- <?php if($_SESSION['loggedin'] == true & $_SESSION['role'] == 1): ?>
+                                <li><a href="manage.php">Manage</a></li>
+                            <?php endif; ?> -->
                         </ul>
                     </div>
                     <div class="search">
