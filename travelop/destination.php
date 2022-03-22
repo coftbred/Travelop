@@ -29,12 +29,12 @@ include 'includes/header.php'
 <section class="destination">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="img-fuild">
                     <img src="./img/intro_1.jpg" alt="">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="des-info">
                     <h2>Mauritius Island</h2>
                     <h2><span style="font-weight: bolder;">Country:</span> Republic of Mauritius</h2>
@@ -52,7 +52,7 @@ include 'includes/header.php'
                       <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
                 </div>
-              <div class="book-btn">
+              <div class="book-btn float-start">
               <button class="btn-primary">Explore Now <span></span></button>
               </div>
             </div>
@@ -70,7 +70,7 @@ include 'includes/header.php'
                     <div class="container p-5">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="./img/intro_1.jpg" class="d-block w-100" alt="...">
+                            <img src="./img/intro_1.jpg" class="d-block w-100" alt="...">   
                         </div>
                         <div class="col-md-4">
                             <img src="./img/intro_2.jpg" class="d-block w-100" alt="...">
@@ -82,7 +82,7 @@ include 'includes/header.php'
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="container">
+                    <div class="container p-5">
                     <div class="row">
                         <div class="col-md-4">
                             <img src="./img/intro_1.jpg" class="d-block w-100" alt="...">
@@ -97,7 +97,7 @@ include 'includes/header.php'
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="container">
+                    <div class="container p-5">
                     <div class="row">
                         <div class="col-md-4">
                             <img src="./img/intro_1.jpg" class="d-block w-100" alt="...">

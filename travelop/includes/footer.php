@@ -29,7 +29,7 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <img src="./img/latest_1.jpg" alt="">
+                                <img src="./img/latest_2.jpg" alt="">
                             </div>
                             <div class="right">
                                 <p>New destination for you</p>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="item">
                             <div class="left">
-                                <img src="./img/latest_1.jpg" alt="">
+                                <img src="./img/latest_3.jpg" alt="">
                             </div>
                             <div class="right">
                                 <p>Travel with us yesterday</p>

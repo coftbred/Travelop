@@ -10,6 +10,7 @@
         background: url(https://thumbs.dreamstime.com/b/travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-150871769.jpg);
         background-attachment: inherit;
         background-size: contain;
+        background-repeat: round;
     }
     
 </style>
@@ -138,7 +139,64 @@
     </section>
     <section class="package">
         <div class="container">
-            <div class="inner-content">
+            <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="inner-content">
+                            <h2>Maldives Delux package</h2>
+                            <img class="img-fluid w-75" style="height: 50vh;" src="https://img.nhandan.com.vn/Files/Images/2021/02/17/200512103822_maldives_bungalow_a-1613558933290.jpg" alt="">
+                            <div class="rating-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nulla. Dolore est illum reprehenderit magni non temporibus enim, dolores aliquam qui velit, numquam corrupti itaque?</p>
+                            <button class="btn-primary">Book Now <span></span></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="inner-content">
+                            <h2>GRAND CASTLE package</h2>
+                            <img class="img-fluid w-75" style="height: 50vh;" src="https://www.intuswindows.com/wp-content/uploads/2018/01/GC-Complete-4_WEB-e1585229839104.jpg" alt="">
+                            <div class="rating-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nulla. Dolore est illum reprehenderit magni non temporibus enim, dolores aliquam qui velit, numquam corrupti itaque?</p>
+                            <button class="btn-primary">Book Now <span></span></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="inner-content">
+                            <h2>TURKEY HILLS package</h2>
+                            <img class="img-fluid w-75" style="height: 50vh;" src="https://hikearizona.com/t2008/01/04/O_5929-777777_1199466201-11.jpg" alt="">
+                            <div class="rating-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nulla. Dolore est illum reprehenderit magni non temporibus enim, dolores aliquam qui velit, numquam corrupti itaque?</p>
+                            <button class="btn-primary">Book Now <span></span></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- <div class="inner-content">
                 <h2>Maldives Delux package</h2>
                 <div class="rating-star">
                     <i class="fa fa-star"></i>
@@ -152,7 +210,7 @@
             </div>
             <button class="previous"><img src="./img/icon/prev.png" alt=""></button>
             <button class="next"><img src="./img/icon/next.png" alt=""></button>
-        </div>
+        </div> -->
     </section>
 
 

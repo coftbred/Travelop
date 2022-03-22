@@ -6,6 +6,8 @@ class Destination {
     public $DesName;
     public $DesLocation;
     public $DesImg;
+    public $Description;
+    
     public function __construct($conn) {
         $this->conn = $conn;
     }
