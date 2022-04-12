@@ -27,7 +27,7 @@
         color: black;
     }
 </style>
-<link rel="stylesheet" href="./css/manager.css">
+
 
     <section class="home">
         <div class="background">

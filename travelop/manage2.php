@@ -2,6 +2,7 @@
     include 'includes/header.php';
     include 'classes/destination.php';
     include 'classes/tourpackage.php';
+    include 'classes/tourStatus.php';
     include 'function/search.php';
 
 ?>
@@ -18,7 +19,7 @@
     <section class="home">
         <div class="background">
             <div class="inner">
-                <h1>View tour</h1>
+                <h1>Manager Tour</h1>
             </div>
         </div>
     </section>
@@ -26,16 +27,18 @@
     <section class="search">
         <div class="container">
             <ul>
+            <li>
+                        <a href="manage.php"> 
+                            <h6>Post tours</h6>
+                        </a>
+                    </li>
                 <li class="active">
                     <a href="manage2.php"> 
                         <h6>View tours</h6>
                     </a>
                 </li>
-                    <li>
-                        <a href="manage.php"> 
-                            <h6>Post tours</h6>
-                        </a>
-                    </li>
+
+  
             </ul>
     </section>
 
@@ -46,13 +49,8 @@
 
             <div class="wrapper">
                 <?php 
-                    if (isset($_REQUEST['ok'])) {
-                        search();
-                    }
-                    else {
-                        $tourpack = new TourPack($conn);
-                        $tourpack->output();
-                    }
+                        $tourStatus = new tourStatus($conn);
+                        $tourStatus->output();
                  ?>            
             </div>
         </div>
