@@ -1,5 +1,10 @@
 <?php 
-    include 'includes/header.php'
+    include 'includes/header.php';
+    include 'classes/destination.php';
+    include 'classes/tourpackage.php';
+    include 'function/search.php';
+
+
 
 ?>
 <style>
@@ -48,10 +53,11 @@
                     <h6>Activities</h6>
                 </li>
             </ul>
+            <form action="offers.php" method="get">
             <div class="all-input">
                 <div>
                     <label for="">Destination</label>
-                    <input type="text">
+                    <input type="text" name="search" >
                 </div>
                 <div>
                     <label for="">Check in</label>
@@ -127,11 +133,14 @@
                     </li>
                 </ol>
             </div>
-            <button class="btn-primary" type="submit">Search <span></span> </button>
+
+       
+            <button class="btn-primary" type="submit" name="ok" value="search"> Search <span></span> </button>
+            </form>
         </div>
     </section>
 
-    <section class="offer">
+   <section class="offer">
         <div class="container">
             <div class="dropdowns">
                 <div class="dropdown">
@@ -202,170 +211,27 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="wrapper">
-                <div class="item">
-                    <div class="left">
-                        <h5>Grand Castle</h5>
-                    </div>
-                    <div class="right">
-                        <div class="review-pricing">
-                            <div class="inner-left">
-                                <p><span>$50</span> per night</p>
-                                <div class="rating-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="inner-right">
-                                <div>
-                                    <h5>Very Good</h5>
-                                    <p>110 reviews</p>
-                                </div>
-                                <div>
-                                    <span>8.1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, adipisci sint. Natus facere explicabo odit labore blanditiis tempora 
-                        </p>
-                        <div class="icon">
-                            <i class="fa fa-clock"></i>
-                            <i class="fa fa-bicycle"></i>
-                            <i class="fa fa-map-signs"></i>
-                            <i class="fab fa-app-store"></i>
-                        </div>
-
-                        <button class="btn-primary">Book <span></span></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <h5>Grand Castle</h5>
-                    </div>
-                    <div class="right">
-                        <div class="review-pricing">
-                            <div class="inner-left">
-                                <p><span>$50</span> per night</p>
-                                <div class="rating-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="inner-right">
-                                <div>
-                                    <h5>Very Good</h5>
-                                    <p>110 reviews</p>
-                                </div>
-                                <div>
-                                    <span>8.1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, adipisci sint. Natus facere explicabo odit labore blanditiis tempora 
-                        </p>
-                        <div class="icon">
-                            <i class="fa fa-clock"></i>
-                            <i class="fa fa-bicycle"></i>
-                            <i class="fa fa-map-signs"></i>
-                            <i class="fab fa-app-store"></i>
-                        </div>
-
-                        <button class="btn-primary">Book <span></span></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <h5>Grand Castle</h5>
-                    </div>
-                    <div class="right">
-                        <div class="review-pricing">
-                            <div class="inner-left">
-                                <p><span>$50</span> per night</p>
-                                <div class="rating-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="inner-right">
-                                <div>
-                                    <h5>Very Good</h5>
-                                    <p>110 reviews</p>
-                                </div>
-                                <div>
-                                    <span>8.1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, adipisci sint. Natus facere explicabo odit labore blanditiis tempora 
-                        </p>
-                        <div class="icon">
-                            <i class="fa fa-clock"></i>
-                            <i class="fa fa-bicycle"></i>
-                            <i class="fa fa-map-signs"></i>
-                            <i class="fab fa-app-store"></i>
-                        </div>
-
-                        <button class="btn-primary">Book <span></span></button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <h5>Grand Castle</h5>
-                    </div>
-                    <div class="right">
-                        <div class="review-pricing">
-                            <div class="inner-left">
-                                <p><span>$50</span> per night</p>
-                                <div class="rating-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="inner-right">
-                                <div>
-                                    <h5>Very Good</h5>
-                                    <p>110 reviews</p>
-                                </div>
-                                <div>
-                                    <span>8.1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, adipisci sint. Natus facere explicabo odit labore blanditiis tempora 
-                        </p>
-                        <div class="icon">
-                            <i class="fa fa-clock"></i>
-                            <i class="fa fa-bicycle"></i>
-                            <i class="fa fa-map-signs"></i>
-                            <i class="fab fa-app-store"></i>
-                        </div>
-
-                        <button class="btn-primary">Book <span></span></button>
-                    </div>
-                </div>
+                <?php 
+                    if (isset($_REQUEST['ok'])) {
+                        search();
+                    }
+                    else {
+                        $tourpack = new TourPack($conn);
+                        $tourpack->output();
+                    }
+                 ?>            
             </div>
         </div>
     </section>
 
 
 
-<?php 
-include 'includes/footer.php'
 
+<?php 
+if (!isset($_REQUEST['ok'])) {
+    include 'includes/footer.php';
+}
 ?>

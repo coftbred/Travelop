@@ -1,4 +1,4 @@
-html,body{
+shtml,body{
 background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
 background-position: center;
 background-attachment: fixed;
@@ -22,7 +22,7 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
-color: #FFC312;
+color: #ff7d12;
 }
 
 .social_icon span:hover{
@@ -42,7 +42,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
+background-color: #ff7d12;
 color: black;
 border:0 !important;
 }
@@ -67,7 +67,7 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #FFC312;
+background-color: #ff7d12;
 width: 100px;
 }
 

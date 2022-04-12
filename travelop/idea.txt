@@ -1,0 +1,6 @@
+Booking 	-> 
+		-> data sent to database and save -> agent can query customer list with status (Pay ot not)
+			payment (just click pay) -> change customer status
+								-> customer cancel ticket -> change ticket status and delete customer in list
+														-> customer receive message 
+			(ticket was cancel and receive % money with start date (50% > 5 date before, 30% > 3 date, no refund < 3 date)

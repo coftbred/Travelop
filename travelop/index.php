@@ -52,10 +52,11 @@
                     <h6>Activities</h6>
                 </li>
             </ul>
+            <form action="offers.php" method="get">
             <div class="all-input">
                 <div>
                     <label for="">Destination</label>
-                    <input type="text">
+                    <input type="text" name="search">
                 </div>
                 <div>
                     <label for="">Check in</label>
@@ -81,9 +82,10 @@
                         <option value="3">3</option>
                     </select>
                 </div>
-                <button class="btn-primary" type="submit">Search <span></span> </button>
+                <button class="btn-primary" type="submit" name="ok" value="search">Search <span></span> </button>
                 
             </div>
+            </form>
         </div>
     </section>
     <section class="intro container">
@@ -102,7 +104,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <a href="destination.php"><button class="btn-primary" >See more<span></span></button></a>
+                    <a href="offers.php"><button class="btn-primary" >See more<span></span></button></a>
                 </div>
             </div>
             <div class="card">
@@ -117,7 +119,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <button class="btn-primary">See more <span></span></button>
+                    <a href="offers.php"><button class="btn-primary" >See more<span></span></button></a>
                 </div>
             </div>
             <div class="card">
@@ -132,7 +134,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <button class="btn-primary">See more <span></span></button>
+                    <a href="offers.php"><button class="btn-primary" >See more<span></span></button></a>
                 </div>
             </div>
         </div>

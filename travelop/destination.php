@@ -1,5 +1,9 @@
 <?php 
-include 'includes/header.php'
+    include 'includes/header.php';
+    include 'classes/tourpackage.php';
+    include 'classes/destination.php';
+
+
 ?>
 
 <style>
@@ -26,39 +30,15 @@ include 'includes/header.php'
     </div>
 </section>
 
+
+
 <section class="destination">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="img-fuild">
-                    <img src="./img/intro_1.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="des-info">
-                    <h2>Mauritius Island</h2>
-                    <h2><span style="font-weight: bolder;">Country:</span> Republic of Mauritius</h2>
-                    <p>Mauritius lies about 500 miles (800 km) east of Madagascar in the Indian Ocean. 
-                        Its outlying territories are Rodrigues Island, situated about 340 miles (550 km) eastward,
-                         the Cargados Carajos Shoals, 250 miles (400 km) northeastward, and the Agalega Islands, 
-                         580 miles (930 km) northward from the main island.</p>
-                    <p>May 25th - June 1st</p>
-                    <h6>From 1450$</h6>
-                  <div class="rating-star">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-              <div class="book-btn float-start">
-              <button class="btn-primary">Explore Now <span></span></button>
-              </div>
-            </div>
-        </div>
-        <hr>
-    </div>
+    <?php    
+        $des = new Destination($conn);
+        $des->getDesbyId($_GET);
+        $des->output($_GET['id']);
+
+    ?>
 </section>
 
 <section class="relative-des">
@@ -125,5 +105,5 @@ include 'includes/header.php'
 </section>
 
 <?php 
-include 'includes/footer.php'
+include 'includes/footer.php';
 ?>

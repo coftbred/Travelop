@@ -8,8 +8,8 @@
         public $addr;
         public $dob;
         public $phone;
-        public $password;
-        public $password_hash;
+        private $password;
+        private $password_hash;
         public $role;
         public $user = [];
         public $users = [];
@@ -167,25 +167,7 @@
             $_SESSION['user_name'] = $this->name;
         }
 
-        public function sendRequestRole($requiredRole) {
-            $sql = "SELECT * FROM request_role WHERE userID = ? and checked = 0";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param('i', $this->id);
-            $stmt->execute();
-            $results = $stmt->get_result()->fetch_all();
 
-
-            if (count($results) > 0) {
-                echo 'Your request has existed!';                
-            } else {
-                $sql = "INSERT INTO request_role (userID, roleBefore, requiredRole) values (?, ?, ?)";
-                $stmt = $this->conn->prepare($sql);
-                $stmt->bind_param('iii', $this->id, $this->role, $requiredRole);
-                $stmt->execute();
-                echo 'Your request is sent';
-            }
-            
-        }
 
     }
 

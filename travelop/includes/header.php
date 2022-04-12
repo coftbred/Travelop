@@ -66,9 +66,12 @@
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="offers.php">Offer</a></li>
                             <li><a href="blog.php">News</a></li>
-                            <!-- <?php if($_SESSION['loggedin'] == true & $_SESSION['role'] == 1): ?>
-                                <li><a href="manage.php">Manage</a></li>
-                            <?php endif; ?> -->
+                            <?php 
+                            if($_SESSION['loggedin'] == true): ?>
+                                <?php if($_SESSION['user_role'] == 0):?> 
+                                    <li><a href="manage.php">Manage</a></li>
+                              <?php endif;  ?>       
+                            <?php endif; ?>
                         </ul>
                     </div>
                     <div class="search">
